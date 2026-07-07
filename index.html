@@ -1,71 +1,434 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title> Main Topics </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Stack Web Development — Course Resources</title>
+  <meta name="description" content="Access all Full Stack Web Development course materials including unit notes, syllabi, lab syllabus, and curated video lectures." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<h3> Menu </h3>
-<ul>
-<li> <a href = "fullstacksylla.pdf" target = "second frame"> Syllabus </a><br>
-<li> <a href = "fswdlabsy.pdf" target = "second frame"> Lab Syllabus </a><br>  
-<li> <a href = "Angular.pdf" target = "second frame"> Installation Procedure - step by step </a><br>  
-<li> <a href = "Unit1.pdf" target = "second frame"> UNIT I </a><br>
-<li> <a href = "Unit2.pdf" target = "second frame"> UNIT II </a><br>
-<li> <a href = "Unit21.pdf" target = "second frame"> UNIT IIPrac</a><br>
-<li> <a href = "Fswdunit3.pdf" target = "second frame"> UNIT III </a><br>
-  <li> <a href = "Fswdunit4.pdf" target = "second frame"> UNIT IV </a><br>
-    <li> <a href = "Fswdunit5.pdf" target = "second frame"> UNIT V </a><br>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/4NL6Td5C4vA"
-    title="YouTube Video Player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/gsPvZb1ymf4"
-    title="YouTube Video Player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/0IceZ7vkjfk"
-    title="YouTube Video Player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-  <iframe width="560" height="315" src="https://youtube.com/embed/Fjfeefgh2jM"
-    title="YouTube Video Player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-  <iframe width="560" height="315" src="https://youtube.com/embed/zhTfyFAY7_U"
-    title="YouTube Video Player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-  <iframe width="560" height="315" src="https://youtube.com/embed/-QC94i_7W0w"
-    title="YouTube Video Player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-<li> <a href = "Unit4.pdf" target = "second frame"> UNIT V </a><br>
-</ul>
+
+  <!-- HEADER -->
+  <header>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="2" y1="5" x2="16" y2="5"/>
+        <line x1="2" y1="9" x2="16" y2="9"/>
+        <line x1="2" y1="13" x2="16" y2="13"/>
+      </svg>
+    </button>
+
+    <a class="header-logo" href="#">
+      <div class="logo-mark">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+        </svg>
+      </div>
+      <div>
+        <div class="logo-text">FSWD Course</div>
+        <div class="logo-sub">Full Stack Web Development</div>
+      </div>
+    </a>
+
+    <div class="header-spacer"></div>
+    <span class="header-badge">2024 – 25</span>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar" id="sidebar" aria-label="Course navigation">
+
+      <!-- Documents -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">Documents</div>
+        <div class="sidebar-items">
+
+          <a class="nav-item" href="#" data-src="fullstacksylla.pdf" data-label="Syllabus" data-type="pdf">
+            <div class="nav-item-icon ic-indigo">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">Syllabus <small>Course overview</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+          <a class="nav-item" href="#" data-src="fswdlabsy.pdf" data-label="Lab Syllabus" data-type="pdf">
+            <div class="nav-item-icon ic-cyan">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0H5m4 0h10m-5-5v5m0 0v3"/><circle cx="17" cy="21" r="1"/><circle cx="7" cy="21" r="1"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">Lab Syllabus <small>Practical lab guide</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+          <a class="nav-item" href="#" data-src="Angular.pdf" data-label="Installation Guide" data-type="pdf">
+            <div class="nav-item-icon ic-orange">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">Installation Guide <small>Step-by-step setup</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Course Units -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">Course Units</div>
+        <div class="sidebar-items">
+
+          <a class="nav-item" href="#" data-src="Unit1.pdf" data-label="Unit I" data-type="pdf">
+            <div class="nav-item-icon ic-blue">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">Unit I <small>Foundations</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+          <a class="nav-item" href="#" data-src="Unit2.pdf" data-label="Unit II" data-type="pdf">
+            <div class="nav-item-icon ic-violet">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">Unit II <small>Core concepts</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+          <a class="nav-item" href="#" data-src="Unit21.pdf" data-label="Unit II — Practical" data-type="pdf">
+            <div class="nav-item-icon ic-green">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">Unit II — Practical <small>Hands-on exercises</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+          <a class="nav-item" href="#" data-src="Fswdunit3.pdf" data-label="Unit III" data-type="pdf">
+            <div class="nav-item-icon ic-rose">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">Unit III <small>Advanced topics</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+          <a class="nav-item" href="#" data-src="Fswdunit4.pdf" data-label="Unit IV" data-type="pdf">
+            <div class="nav-item-icon ic-amber">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">Unit IV <small>Backend &amp; APIs</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+          <a class="nav-item" href="#" data-src="Fswdunit5.pdf" data-label="Unit V" data-type="pdf">
+            <div class="nav-item-icon ic-purple">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">Unit V <small>Deployment &amp; beyond</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Video Lectures -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">Video Lectures</div>
+        <div class="sidebar-items">
+
+          <a class="nav-item" href="#" data-src="https://www.youtube.com/embed/4NL6Td5C4vA" data-label="Full Stack Intro" data-type="video">
+            <div class="nav-item-icon ic-rose">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">Full Stack Intro <small>Getting started</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+          <a class="nav-item" href="#" data-src="https://www.youtube.com/embed/gsPvZb1ymf4" data-label="HTML &amp; CSS Basics" data-type="video">
+            <div class="nav-item-icon ic-orange">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">HTML &amp; CSS Basics <small>Frontend fundamentals</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+          <a class="nav-item" href="#" data-src="https://www.youtube.com/embed/0IceZ7vkjfk" data-label="JavaScript Core" data-type="video">
+            <div class="nav-item-icon ic-amber">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">JavaScript Core <small>Language essentials</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+          <a class="nav-item" href="#" data-src="https://youtube.com/embed/Fjfeefgh2jM" data-label="Node.js &amp; Express" data-type="video">
+            <div class="nav-item-icon ic-green">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">Node.js &amp; Express <small>Backend development</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+          <a class="nav-item" href="#" data-src="https://youtube.com/embed/zhTfyFAY7_U" data-label="React Framework" data-type="video">
+            <div class="nav-item-icon ic-cyan">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">React Framework <small>Component-based UI</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+          <a class="nav-item" href="#" data-src="https://youtube.com/embed/-QC94i_7W0w" data-label="Database &amp; MongoDB" data-type="video">
+            <div class="nav-item-icon ic-violet">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            </div>
+            <div class="nav-item-label">Database &amp; MongoDB <small>Data persistence</small></div>
+            <svg class="nav-item-chevron" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+
+        </div>
+      </div>
+
+    </nav>
+
+    <!-- VIEWER PANE -->
+    <main class="viewer" id="viewer">
+
+      <!-- Toolbar -->
+      <div class="viewer-toolbar" id="viewerToolbar">
+        <div class="viewer-breadcrumb">
+          <span>FSWD</span>
+          <svg class="crumb-sep" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          <span class="crumb-current" id="crumbCurrent">Resource</span>
+        </div>
+        <a class="viewer-btn" id="openNewTab" href="#" target="_blank" rel="noopener">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Open in tab
+        </a>
+        <button class="viewer-btn" id="closeViewer">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Close
+        </button>
+      </div>
+
+      <!-- Welcome screen -->
+      <div class="welcome-screen" id="welcomeScreen">
+
+        <!-- Hero with inline SVG illustration -->
+        <div class="hero-block">
+          <svg class="hero-illustration" viewBox="0 0 440 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Background card -->
+            <rect x="60" y="30" width="320" height="240" rx="20" fill="#f0f4ff" stroke="#dde4fb" stroke-width="1.5"/>
+            <!-- Browser chrome -->
+            <rect x="60" y="30" width="320" height="44" rx="20" fill="#e8edfb"/>
+            <rect x="60" y="54" width="320" height="20" fill="#e8edfb"/>
+            <!-- Browser dots -->
+            <circle cx="90" cy="52" r="5" fill="#fc8080"/>
+            <circle cx="108" cy="52" r="5" fill="#fbbf24"/>
+            <circle cx="126" cy="52" r="5" fill="#4ade80"/>
+            <!-- URL bar -->
+            <rect x="148" y="44" width="180" height="16" rx="8" fill="#fff" stroke="#dde4fb" stroke-width="1"/>
+            <rect x="155" y="49" width="60" height="6" rx="3" fill="#c7d2fe"/>
+            <!-- Sidebar in browser -->
+            <rect x="70" y="84" width="80" height="176" rx="6" fill="#fff" stroke="#dde4fb" stroke-width="1"/>
+            <!-- Sidebar items -->
+            <rect x="78" y="94" width="64" height="10" rx="4" fill="#e0e7ff"/>
+            <rect x="78" y="110" width="64" height="10" rx="4" fill="#f1f5f9"/>
+            <rect x="78" y="126" width="64" height="10" rx="4" fill="#f1f5f9"/>
+            <rect x="78" y="142" width="64" height="10" rx="4" fill="#f1f5f9"/>
+            <rect x="78" y="158" width="64" height="10" rx="4" fill="#f1f5f9"/>
+            <rect x="78" y="174" width="64" height="10" rx="4" fill="#f1f5f9"/>
+            <rect x="78" y="190" width="64" height="10" rx="4" fill="#f1f5f9"/>
+            <!-- Main content area -->
+            <rect x="162" y="84" width="208" height="176" rx="6" fill="#fff" stroke="#dde4fb" stroke-width="1"/>
+            <!-- PDF page lines -->
+            <rect x="172" y="96" width="120" height="8" rx="3" fill="#e0e7ff"/>
+            <rect x="172" y="112" width="188" height="5" rx="2.5" fill="#f1f5f9"/>
+            <rect x="172" y="122" width="160" height="5" rx="2.5" fill="#f1f5f9"/>
+            <rect x="172" y="132" width="175" height="5" rx="2.5" fill="#f1f5f9"/>
+            <rect x="172" y="142" width="140" height="5" rx="2.5" fill="#f1f5f9"/>
+            <rect x="172" y="160" width="188" height="5" rx="2.5" fill="#f1f5f9"/>
+            <rect x="172" y="170" width="170" height="5" rx="2.5" fill="#f1f5f9"/>
+            <rect x="172" y="180" width="155" height="5" rx="2.5" fill="#f1f5f9"/>
+            <rect x="172" y="196" width="188" height="5" rx="2.5" fill="#f1f5f9"/>
+            <rect x="172" y="206" width="120" height="5" rx="2.5" fill="#f1f5f9"/>
+            <rect x="172" y="222" width="188" height="5" rx="2.5" fill="#f1f5f9"/>
+            <rect x="172" y="232" width="100" height="5" rx="2.5" fill="#f1f5f9"/>
+            <!-- Decorative code badge -->
+            <rect x="310" y="20" width="90" height="36" rx="10" fill="#4f6ef7" opacity="0.92"/>
+            <rect x="318" y="30" width="30" height="5" rx="2.5" fill="#fff" opacity="0.7"/>
+            <rect x="318" y="40" width="50" height="5" rx="2.5" fill="#a5b4fc"/>
+            <!-- Floating document card -->
+            <rect x="30" y="180" width="76" height="96" rx="10" fill="#fff" stroke="#dde4fb" stroke-width="1.5" filter="drop-shadow(0 4px 12px rgba(79,110,247,0.1))"/>
+            <rect x="40" y="195" width="56" height="6" rx="3" fill="#c7d2fe"/>
+            <rect x="40" y="207" width="46" height="4" rx="2" fill="#f1f5f9"/>
+            <rect x="40" y="216" width="50" height="4" rx="2" fill="#f1f5f9"/>
+            <rect x="40" y="225" width="40" height="4" rx="2" fill="#f1f5f9"/>
+            <rect x="40" y="238" width="56" height="18" rx="6" fill="#4f6ef7"/>
+            <rect x="50" y="245" width="36" height="4" rx="2" fill="#fff" opacity="0.9"/>
+            <!-- Floating tag -->
+            <rect x="360" y="110" width="68" height="28" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+            <rect x="370" y="120" width="30" height="4" rx="2" fill="#4ade80"/>
+            <rect x="370" y="127" width="42" height="4" rx="2" fill="#d1fae5"/>
+            <!-- Accent dots -->
+            <circle cx="52" cy="90" r="6" fill="#4f6ef7" opacity="0.15"/>
+            <circle cx="396" cy="270" r="8" fill="#7c5cfc" opacity="0.12"/>
+            <circle cx="410" cy="80" r="4" fill="#0ea5e9" opacity="0.2"/>
+          </svg>
+
+          <h1 class="welcome-title">Your <span>Full Stack</span> Course Hub</h1>
+          <p class="welcome-desc">
+            All your unit notes, syllabi, lab guides, and video lectures in one clean, organised space. Pick a resource from the sidebar to open it here.
+          </p>
+        </div>
+
+        <!-- Divider -->
+        <div class="welcome-divider">Quick access</div>
+
+        <!-- Quick cards -->
+        <div class="quick-cards">
+          <div class="quick-card" data-src="fullstacksylla.pdf" data-label="Syllabus" data-type="pdf">
+            <div class="qc-icon-wrap ic-indigo">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <div class="qc-label">Syllabus</div>
+          </div>
+
+          <div class="quick-card" data-src="fswdlabsy.pdf" data-label="Lab Syllabus" data-type="pdf">
+            <div class="qc-icon-wrap ic-cyan">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11"/><line x1="3" y1="15" x2="15" y2="15"/>
+              </svg>
+            </div>
+            <div class="qc-label">Lab Syllabus</div>
+          </div>
+
+          <div class="quick-card" data-src="Unit1.pdf" data-label="Unit I" data-type="pdf">
+            <div class="qc-icon-wrap ic-blue">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <div class="qc-label">Unit I</div>
+          </div>
+
+          <div class="quick-card" data-src="Angular.pdf" data-label="Installation Guide" data-type="pdf">
+            <div class="qc-icon-wrap ic-orange">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+              </svg>
+            </div>
+            <div class="qc-label">Setup Guide</div>
+          </div>
+        </div>
+
+        <!-- Videos -->
+        <div class="videos-section">
+          <div class="section-heading">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+            </svg>
+            Video Lectures
+          </div>
+          <div class="video-grid">
+            <div class="video-card">
+              <iframe src="https://www.youtube.com/embed/4NL6Td5C4vA" title="Full Stack Intro"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy"></iframe>
+              <div class="video-label">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Full Stack Intro
+              </div>
+            </div>
+            <div class="video-card">
+              <iframe src="https://www.youtube.com/embed/gsPvZb1ymf4" title="HTML &amp; CSS Basics"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy"></iframe>
+              <div class="video-label">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                HTML &amp; CSS Basics
+              </div>
+            </div>
+            <div class="video-card">
+              <iframe src="https://www.youtube.com/embed/0IceZ7vkjfk" title="JavaScript Core"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy"></iframe>
+              <div class="video-label">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                JavaScript Core
+              </div>
+            </div>
+            <div class="video-card">
+              <iframe src="https://youtube.com/embed/Fjfeefgh2jM" title="Node.js &amp; Express"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy"></iframe>
+              <div class="video-label">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Node.js &amp; Express
+              </div>
+            </div>
+            <div class="video-card">
+              <iframe src="https://youtube.com/embed/zhTfyFAY7_U" title="React Framework"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy"></iframe>
+              <div class="video-label">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                React Framework
+              </div>
+            </div>
+            <div class="video-card">
+              <iframe src="https://youtube.com/embed/-QC94i_7W0w" title="Database &amp; MongoDB"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy"></iframe>
+              <div class="video-label">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Database &amp; MongoDB
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /welcome-screen -->
+
+      <iframe class="content-frame" id="contentFrame"
+        title="Course content viewer"
+        allowfullscreen allow="fullscreen"></iframe>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
